@@ -11,7 +11,7 @@ so, this repo will use PyMongo and mongoengine for testing purposes
 
 ## [Pymongo](https://pymongo.readthedocs.io)
 
-is a raw implementation of the mongo connection and operations
+Is a raw implementation of the mongo connection and operations and may suffice most applications, but has considerable boilerplate
 
 ## [mongoengine](https://docs.mongoengine.org/)
 
