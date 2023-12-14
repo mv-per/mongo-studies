@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+
+  mongo:
+    build:
+      dockerfile: mongo.dockerfile
+      context: ./.docker/mongo/
+    restart: unless-stopped
+    command: --keyFile /data/keyfile.pem --replSet rs0 --port 27027
+    env_file:
+      - .env
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: ${DATABASE_USER}
+      MONGO_INITDB_ROOT_PASSWORD: ${DATABASE_PASSWORD}
+      MONGO_INITDB_DATABASE: ${DATABASE_NAME}
+      MONGO_DB_PORT: ${DATABASE_PORT}
+    ports:
+      - "${DATABASE_PORT}:${DATABASE_PORT}"

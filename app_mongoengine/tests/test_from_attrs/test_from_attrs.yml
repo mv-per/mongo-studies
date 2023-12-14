@@ -1,0 +1,8 @@
+_cls: DocumentClass
+age: 25
+is_active: true
+name: John
+tags:
+- tag1
+- tag2
+user_id: '123'
